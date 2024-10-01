@@ -110,7 +110,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Concepts: 
-    - concepts/index.md
     - concepts/00.md
     - concepts/01.md
     - concepts/02.md
