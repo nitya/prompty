@@ -1,0 +1,10 @@
+# General
+python-dotenv==1.0.1
+jupyter
+
+# Website
+mkdocs-material
+mkdocs-rss-plugin
+
+# Prompty
+prompty[azure]
