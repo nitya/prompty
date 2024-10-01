@@ -1,0 +1,1250 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Exploring Prompty usage one code-first tutorial at a time">
+      
+      
+        <meta name="author" content="Nitya Narasimhan">
+      
+      
+        <link rel="canonical" href="https://nitya.github.io/prompty/">
+      
+      
+      
+        <link rel="next" href="concepts/00/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="feed_rss_updated.xml">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Prompty For Devs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Prompty For Devs" class="md-header__button md-logo" aria-label="Prompty For Devs" data-md-component="logo">
+      
+  <img src="img/prompty.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prompty For Devs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nitya/prompty" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nitya/prompty
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="concepts/00/" class="md-tabs__link">
+          
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Prompty For Devs" class="md-nav__button md-logo" aria-label="Prompty For Devs" data-md-component="logo">
+      
+  <img src="img/prompty.svg" alt="logo">
+
+    </a>
+    Prompty For Devs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nitya/prompty" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nitya/prompty
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-prompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Prompty?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-we-use-prompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do we use Prompty?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-do-we-use-prompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where do we use Prompty?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompty-for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompty For Developers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompty For Developers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-deep-dive-msbuild-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Deep Dive: MSBuild Session
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Deep Dive: MSBuild Session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-session-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Session Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-prompty-and-ai-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Prompty and AI Studio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Getting Started
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-prompty-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Prompty Specification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-develop-ai-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Develop AI Apps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-seth-llm-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Seth LLM Perspective
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hands-on-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Hands-On Samples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Hands-On Samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-contoso-chat-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Contoso Chat (RAG)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-creative-writer-agentic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Creative Writer (Agentic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ai-templates-azd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. AI Templates (AZD)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepts/00/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Prompty Specification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepts/01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Prompty Tooling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepts/02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Prompty Runtime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepts/03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Prompty Asset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="tutorials/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-prompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Prompty?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-we-use-prompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do we use Prompty?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-do-we-use-prompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where do we use Prompty?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompty-for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompty For Developers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompty For Developers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-deep-dive-msbuild-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Deep Dive: MSBuild Session
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Deep Dive: MSBuild Session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-session-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Session Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-prompty-and-ai-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Prompty and AI Studio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Getting Started
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-prompty-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Prompty Specification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-develop-ai-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Develop AI Apps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-seth-llm-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Seth LLM Perspective
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hands-on-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Hands-On Samples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Hands-On Samples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-contoso-chat-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Contoso Chat (RAG)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-creative-writer-agentic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Creative Writer (Agentic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ai-templates-azd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. AI Templates (AZD)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<div class="admonition example">
+<p class="admonition-title">Learning Resources For Developers</p>
+<ul>
+<li><a href="https://prompty.ai/docs">Read the documentation</a></li>
+<li><a href="https://www.youtube.com/watch?v=HALMFU7o9Gc">Watch the video</a></li>
+<li><a href="https://github.com/microsoft/prompty">Explore the repo</a></li>
+</ul>
+</div>
+<h2 id="what-is-prompty">What is Prompty?<a class="headerlink" href="#what-is-prompty" title="Permanent link">&para;</a></h2>
+<p>Prompty is a new asset class and format for LLM prompts that aims to provide observability, understandability, and portability for developers. It consists of three main components: </p>
+<ul>
+<li>the <strong>Prompty Specification</strong> - a format that describes the asset.</li>
+<li>the <strong>Prompty Tools</strong> - developer workflows to create &amp; manage assets.</li>
+<li>the <strong>Prompty Runtime</strong> - convert asset to code, for testing &amp; usage.</li>
+</ul>
+<p><img alt="What is Prompty?" src="img/BRK114-What-Is-Prompty.png" /></p>
+<h2 id="how-do-we-use-prompty">How do we use Prompty?<a class="headerlink" href="#how-do-we-use-prompty" title="Permanent link">&para;</a></h2>
+<p>Prompty is ideal for rapid prototyping and iteration of a new generative AI application, using rich developer tooling and a local development runtime.</p>
+<ul>
+<li><strong>Start</strong> by creating &amp; testing a simple prompt in VS Code</li>
+<li><strong>Develop</strong> by iterating config &amp; content, use tracing to debug</li>
+<li><strong>Evaluate</strong> prompts with AI assistance, saved locally or to cloud</li>
+</ul>
+<p><img alt="Developer Workflow" src="img/BRK114-Developer-Workflow.png" /></p>
+<h2 id="where-do-we-use-prompty">Where do we use Prompty?<a class="headerlink" href="#where-do-we-use-prompty" title="Permanent link">&para;</a></h2>
+<p>There are many tools &amp; frameworks for building generative AI solutions today. So where does Prompty fit? Think of it as a <strong>micro-orchestrator for a single LLM invocation</strong> where you can:</p>
+<ol>
+<li><em>configure</em> a specific model for your needs</li>
+<li><em>create</em> the template content (system, user, context, instructions)</li>
+<li><em>shape</em> the data used to "render" template for a real invocation</li>
+</ol>
+<p>The Prompty tools and runtime can convert the asset into <em>code</em> that can then be used with richer frameworks (like Semantic Kernel, LangChain, Prompt flow and more) to <strong>orchestrate more complex workflows</strong> for your application.</p>
+<p><img alt="Where Prompty Fits" src="img/BRK114-Where-does-Prompty-fit.png" /></p>
+<h2 id="prompty-for-developers">Prompty For Developers<a class="headerlink" href="#prompty-for-developers" title="Permanent link">&para;</a></h2>
+<h3 id="1-deep-dive-msbuild-session">1. Deep Dive: MSBuild Session<a class="headerlink" href="#1-deep-dive-msbuild-session" title="Permanent link">&para;</a></h3>
+<p>Watch this replay from the Microsoft Build 2024 conference to learn how Prompty works, and how it can streamline your AI development journey from prompt to production. </p>
+<iframe width="800" height="400" src="https://www.youtube.com/embed/HALMFU7o9Gc" title="BRK114:Practical End-to-End AI Development using Prompty and AI Studio" frameborder="0" allowfullscreen></iframe>
+
+<p>You can find a <a href="https://build.microsoft.com/sessions/86e41e8b-1fd2-40fa-a608-6f99a28d4a61?source=sessions">transcript of the session here</a>. Save the file to your local device, open it in VS Code - then try using Copilot Chat to get a summary of the main points:</p>
+<div class="admonition tip">
+<p class="admonition-title">This is the summarization prompt I used</p>
+<p>Summarize the transcript and generate a blog in Markdown format with the following components:</p>
+<p>Divide the summary into 6 topics with each topic described in a Markdown section
+The section should have a descriptive title followed by a short paragraph describing the topic, followed by a list of 4 bullet points that summarize what you learned in that section.
+Start the Markdown document with a brief description of the whole document and 4 bullet items about what the entire summary covers</p>
+</div>
+<details class="example">
+<summary>This is the lightly-edited output of that prompt for reference</summary>
+<p>This document provides a summary of the BRK114 session held at Microsoft Build 2024. The session, led by Seth Juarez and Leah Bar On Simmons, covers various aspects of AI development using Prompty and AI Studio. Below are the key topics discussed:</p>
+<ul>
+<li>Overview of the Session</li>
+<li>Introduction to Prompty and AI Studio</li>
+<li>Getting Started with LLMs</li>
+<li>Prompty Specification</li>
+<li>Developing an App with Prompty</li>
+<li>Seth Juarez's Perspective on LLMs</li>
+</ul>
+<h4 id="11-session-overview">1.1 Session Overview<a class="headerlink" href="#11-session-overview" title="Permanent link">&para;</a></h4>
+<p>The session, BRK114, is part of the Microsoft Build 2024 event and is presented by Seth Juarez and Leah Bar On Simmons. It focuses on practical end-to-end AI development using Prompty and AI Studio.</p>
+<ul>
+<li><strong>Speakers</strong>: Seth Juarez, Leah Bar On Simmons</li>
+<li><strong>Event</strong>: Microsoft Build 2024</li>
+<li><strong>Session Focus</strong>: Practical AI development</li>
+<li><strong>Audience Interaction</strong>: Encouraged feedback and questions</li>
+</ul>
+<h4 id="12-prompty-and-ai-studio">1.2 Prompty and AI Studio<a class="headerlink" href="#12-prompty-and-ai-studio" title="Permanent link">&para;</a></h4>
+<p>Seth Juarez introduces Prompty and AI Studio, highlighting their importance in AI development. He emphasizes the practical applications and the fun elements like logos, stickers, and merchandise.</p>
+<ul>
+<li><strong>Tools Introduced</strong>: Prompty, AI Studio</li>
+<li><strong>Session Tone</strong>: Interactive and engaging</li>
+<li><strong>Merchandise</strong>: Stickers, T-shirts, hats</li>
+<li><strong>Audience Engagement</strong>: Encouraged to ask questions</li>
+</ul>
+<h4 id="13-getting-started">1.3 Getting Started<a class="headerlink" href="#13-getting-started" title="Permanent link">&para;</a></h4>
+<p>The session covers the basics of getting started with Large Language Models (LLMs) using Prompty in Visual Studio Code. Seth Juarez explains the initial steps and the importance of understanding the Prompty specification.</p>
+<ul>
+<li><strong>Focus</strong>: Getting started with LLMs</li>
+<li><strong>Tool</strong>: Visual Studio Code</li>
+<li><strong>Specification</strong>: Prompty spec</li>
+<li><strong>Initial Steps</strong>: Explained by Seth Juarez</li>
+</ul>
+<h4 id="14-prompty-specification">1.4 Prompty Specification<a class="headerlink" href="#14-prompty-specification" title="Permanent link">&para;</a></h4>
+<p>Seth Juarez delves into the Prompty specification, explaining its significance and how it guides the development process. He emphasizes the structured approach provided by the specification.</p>
+<ul>
+<li><strong>Specification</strong>: Prompty spec</li>
+<li><strong>Importance</strong>: Guides development</li>
+<li><strong>Structure</strong>: Provides a structured approach</li>
+<li><strong>Explanation</strong>: Detailed by Seth Juarez</li>
+</ul>
+<h4 id="15-develop-ai-apps">1.5 Develop AI Apps<a class="headerlink" href="#15-develop-ai-apps" title="Permanent link">&para;</a></h4>
+<p>The session includes a segment on developing an application using Prompty. Seth Juarez walks through the process, highlighting key aspects and best practices.</p>
+<ul>
+<li><strong>Focus</strong>: App development with Prompty</li>
+<li><strong>Process</strong>: Walkthrough by Seth Juarez</li>
+<li><strong>Key Aspects</strong>: Highlighted during the session</li>
+<li><strong>Best Practices</strong>: Discussed</li>
+</ul>
+<h4 id="16-seth-llm-perspective">1.6 Seth LLM Perspective<a class="headerlink" href="#16-seth-llm-perspective" title="Permanent link">&para;</a></h4>
+<p>Seth Juarez shares his unique perspective on Large Language Models, likening them to giant language calculators. He uses relatable examples to explain his viewpoint.</p>
+<ul>
+<li><strong>Perspective</strong>: LLMs as language calculators</li>
+<li><strong>Examples</strong>: Relatable and engaging</li>
+<li><strong>Explanation Style</strong>: Unique and insightful</li>
+<li><strong>Audience Engagement</strong>: Encouraged to follow along</li>
+</ul>
+<p>This summary captures the essence of the BRK114 session, providing a structured overview of the key topics discussed by Seth Juarez and Leah Bar On Simmons at Microsoft Build 2024.</p>
+</details>
+<h3 id="2-hands-on-samples">2. Hands-On Samples<a class="headerlink" href="#2-hands-on-samples" title="Permanent link">&para;</a></h3>
+<h4 id="21-contoso-chat-rag">2.1 Contoso Chat (RAG)<a class="headerlink" href="#21-contoso-chat-rag" title="Permanent link">&para;</a></h4>
+<p>Learn how to use Prompty to rapidly prototype a RAG-based retail copilot, from prompt engineering to evaluation and deployment, using the <a href="https://aka.ms/aitour/contoso-chat">Contoso Chat sample</a>. <strong>Click the image below to visit an interactive workshop guide</strong>.</p>
+<p><a href="https://aka.ms/aitour/contoso-chat/workshop"><img alt="Contoso Chat" src="img/contoso-chat-workshop.png" /></a></p>
+<h4 id="22-creative-writer-agentic">2.2. Creative Writer (Agentic)<a class="headerlink" href="#22-creative-writer-agentic" title="Permanent link">&para;</a></h4>
+<p>Learn how to use Prompty to build a rapid prototype for a multi-agent AI solution, integrating search and content creation, using the <a href="https://github.com/Azure-Samples/contoso-creative-writer">Contoso Creative Writer sample</a>. <strong>Visit the repo for a link to an interactive workshop guide.</strong></p>
+<p><img alt="Contoso Creative Writer" src="img/contoso-creative-writer.png" /></p>
+<h4 id="23-ai-templates-azd">2.3. AI Templates (AZD)<a class="headerlink" href="#23-ai-templates-azd" title="Permanent link">&para;</a></h4>
+<p>Want to explore more Azure AI application samples built with prompty? Check out the <a href="https://learn.microsoft.com/collections/5pq0uompdgje8d?sharingId=ADFFF9D4AD9A0F29&amp;WT_mc.id=aip-114567-cassieb">2024 AI Templates collection</a> released at Microsoft Build 2024 for early samples using diverse programming languages, frameworks, and deployment targets.</p>
+<p><img alt="AI Templates" src="img/azd-ai-templates.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="concepts/00/" class="md-footer__link md-footer__link--next" aria-label="Next: 1. Prompty Specification">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                1. Prompty Specification
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - present Nitya Narasimhan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
