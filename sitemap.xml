@@ -2,34 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nitya.github.io/prompty/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2025-03-14</lastmod>
     </url>
     <url>
-         <loc>https://nitya.github.io/prompty/blog/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <loc>https://nitya.github.io/prompty/Prompty%20/00/</loc>
+         <lastmod>2025-03-14</lastmod>
     </url>
     <url>
-         <loc>https://nitya.github.io/prompty/concepts/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-01/00/</loc>
+         <lastmod>2025-03-14</lastmod>
     </url>
     <url>
-         <loc>https://nitya.github.io/prompty/concepts/00/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-01/01/</loc>
+         <lastmod>2025-03-14</lastmod>
     </url>
     <url>
-         <loc>https://nitya.github.io/prompty/concepts/01/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-01/02/</loc>
+         <lastmod>2025-03-14</lastmod>
     </url>
     <url>
-         <loc>https://nitya.github.io/prompty/concepts/02/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-01/03/</loc>
+         <lastmod>2025-03-14</lastmod>
     </url>
     <url>
-         <loc>https://nitya.github.io/prompty/concepts/03/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-01/04/</loc>
+         <lastmod>2025-03-14</lastmod>
     </url>
     <url>
-         <loc>https://nitya.github.io/prompty/tutorials/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-01/05/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-02/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-02/01/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-02/02/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-03/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-04/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-04/01/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-04/02/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-04/03/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-04/04/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-05/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-05/01/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Prompty%20/Section-05/02/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/basic/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/basic_json_output/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/basic_mustache/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/chat/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/context/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/embedding/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/evaluation/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/faithfulness/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/fake/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/funcfile/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/functions/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/groundedness/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/serverless/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/serverless_stream/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/streaming/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-100/structured_output/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-200/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Sandbox/Section-300/00/</loc>
+         <lastmod>2025-03-14</lastmod>
+    </url>
+    <url>
+         <loc>https://nitya.github.io/prompty/Staging/00/</loc>
+         <lastmod>2025-03-14</lastmod>
     </url>
 </urlset>
