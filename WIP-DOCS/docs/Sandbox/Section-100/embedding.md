@@ -1,0 +1,17 @@
+# Basic Embedding
+
+```prompty
+---
+name: Basic Embedding
+description: Embedding Example (completely overwrought but wanted to test the concept)
+authors:
+  - sethjuarez
+  - jietong
+model:
+  api: embedding
+  configuration:
+    azure_deployment: text-embedding-ada-002
+sample:
+  text: embedding text
+---
+{{text}}
