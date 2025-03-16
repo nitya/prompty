@@ -714,7 +714,7 @@
         
   
   <span class="md-ellipsis">
-    Tutorials 🔴
+    Tutorials 🟢
     
   </span>
   
@@ -736,7 +736,7 @@
         
   
   <span class="md-ellipsis">
-    1. Using LangChain 🔴
+    1. Using LangChain 🟢
     
   </span>
   
@@ -800,6 +800,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-semantic-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Semantic Kernel?
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
@@ -2101,6 +2110,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-semantic-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Semantic Kernel?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -2242,15 +2260,26 @@
 </div>
 <hr />
 <p>This guide explains how to use Prompty templates within the Microsoft Semantic Kernel. The <code>Microsoft.SemanticKernel.Prompty</code> package (currently in alpha) allows for flexible use of Prompty files to define chat prompts and functions for AI-powered applications.</p>
+<hr />
+<h2 id="what-is-semantic-kernel">What is Semantic Kernel?<a class="headerlink" href="#what-is-semantic-kernel" title="Permanent link">&para;</a></h2>
+<p>By <a href="https://learn.microsoft.com/en-us/semantic-kernel/overview/">definition</a>, Semantic Kernel is a lightweight, open-source development kit that lets you easily build AI agents and integrate the latest AI models into your C#, Python, or Java codebase. It serves as an <strong>efficient middleware</strong> that enables rapid delivery of enterprise-grade solutions.</p>
+<p>The <a href="https://learn.microsoft.com/dotnet/api/microsoft.semantickernel.promptykernelextensions?view=semantic-kernel-dotnet">PromptyKernelExtensions</a> class provides methods for creating "kernel functions" that can be invoked as part of a Semantic Kernel workload. Currently, this supports two methods that create functions from a Prompty template:
+ - <a href="https://learn.microsoft.com/dotnet/api/microsoft.semantickernel.promptykernelextensions.createfunctionfromprompty?view=semantic-kernel-dotnet">CreateFunctionFromPrompty</a> - loads Prompty template from an inline string
+ - <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.semantickernel.promptykernelextensions.createfunctionfrompromptyfile?view=semantic-kernel-dotnet">CreateFunctionFromPromptyFile</a> - loads Prompty template from an external file</p>
+<p>The two "Basic" code examples below explain how these methods can be used to create a Prompty-based kernel function.</p>
+<p>Once created, the function can be <a href="https://learn.microsoft.com/dotnet/api/microsoft.semantickernel.kernelfunction?view=semantic-kernel-dotnet">invoked in different ways</a> - using <a href="https://learn.microsoft.com/dotnet/api/microsoft.semantickernel.kernelarguments?view=semantic-kernel-dotnet">kernel arguments</a> to pass in required data or arguments for function execution.</p>
+<p>The "Advanced" code example below explains how this can be used to populate relevant data (documents or context) required by your Prompty template, providing support for patterns like Retrieval Augmented Generation.</p>
+<hr />
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Install the NuGet package</strong>: You need to install the <code>Microsoft.SemanticKernel.Prompty</code> package. It can be found on NuGet at the following link: <a href="https://www.nuget.org/packages/Microsoft.SemanticKernel.Prompty/1.24.1-alpha">Microsoft.SemanticKernel.Prompty (Alpha)</a></li>
+<li><strong>Install <a href="https://www.nuget.org/packages/Microsoft.SemanticKernel.Prompty/1.24.1-alpha">Microsoft.SemanticKernel.Prompty (Alpha)</a> package</strong> with this command:</li>
 </ol>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dotnet add package Microsoft.SemanticKernel.Prompty --version 1.24.1-alpha
 </code></pre></div></td></tr></table></div>
 <ol>
-<li><strong>Setup your Semantic Kernel</strong>: Make sure you have the Semantic Kernel ready in your project by adding the necessary dependencies and configuring the kernel.</li>
+<li><strong>Setup Semantic Kernel and configure it</strong>. Follow the <a href="https://learn.microsoft.com/en-us/semantic-kernel/get-started/quick-start-guide?pivots=programming-language-csharp">Semantic Kernel</a> quickstart for guidance if you are new to this framework.</li>
 </ol>
+<hr />
 <h2 id="basic-example-inline-function">Basic Example: Inline Function<a class="headerlink" href="#basic-example-inline-function" title="Permanent link">&para;</a></h2>
 <p>Here's an example of how to create and use a Prompty file with an inline function within the Semantic Kernel.</p>
 <h3 id="code-example">Code Example<a class="headerlink" href="#code-example" title="Permanent link">&para;</a></h3>
@@ -2333,6 +2362,7 @@
 <li>The <code>CreateFunctionFromPrompty</code> method is used to create a Semantic Kernel function from the Prompty template.</li>
 <li>The function is invoked with <code>InvokeAsync</code>, and the result is printed.</li>
 </ul>
+<hr />
 <h2 id="basic-example-using-a-file">Basic Example: Using a file<a class="headerlink" href="#basic-example-using-a-file" title="Permanent link">&para;</a></h2>
 <p>This method allows you to load a Prompty template directly from a file.</p>
 <h3 id="code-example_1">Code Example<a class="headerlink" href="#code-example_1" title="Permanent link">&para;</a></h3>
@@ -2428,6 +2458,7 @@
 <li>The function is created and invoked just like in the previous examples, but this time the template is loaded from a file.</li>
 </ol>
 <p>This demonstrates how to handle external Prompty files in your Semantic Kernel setup.</p>
+<hr />
 <h2 id="advanced-example-using-variables">Advanced Example: Using Variables<a class="headerlink" href="#advanced-example-using-variables" title="Permanent link">&para;</a></h2>
 <p>You can also add variables and dynamic data to your prompt. Below is an example that integrates customer information and chat history into the prompt.</p>
 <h3 id="code-example_2">Code Example<a class="headerlink" href="#code-example_2" title="Permanent link">&para;</a></h3>
@@ -2573,6 +2604,7 @@
 <li>The template can be customized to include placeholders for values, which are filled when the prompt is executed.</li>
 <li>The result reflects personalized responses based on the provided variables, such as the customer's name, membership level, and chat history.</li>
 </ul>
+<hr />
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
 <p>Prompty allows you to define detailed, reusable prompt templates for use in the Semantic Kernel. By following the steps in this guide, you can quickly integrate Prompty files into your Semantic Kernel-based applications, making your AI-powered interactions more dynamic and flexible.</p>
 <hr />
@@ -2616,7 +2648,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../01/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Using LangChain 🔴">
+          <a href="../01/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Using LangChain 🟢">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2626,7 +2658,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                1. Using LangChain 🔴
+                1. Using LangChain 🟢
               </div>
             </div>
           </a>
