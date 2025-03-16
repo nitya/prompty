@@ -1,0 +1,627 @@
+---
+title: Prompty Cookbook
+authors:
+  - bethanyjep
+  - nitya
+date: 2025-03-14
+tags:
+  - tutorials
+  - invokers
+index: 5
+---
+
+## Prompty By Example
+
+### 1. Schema: Type
+
+The `type` property in the Prompty schema defines the type of the model or configuration. It can be `chat`, `completion`, etc.
+
+Refer to the [Prompty.yaml](#filepath: /workspaces/prompty/Prompty.yaml) specification for more details.
+
+```yaml
+---
+name: Chat Example
+description: A prompt that uses the chat API to answer questions
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 2. Working with Image Data
+
+Prompty can be used to work with image data by defining a function that processes images.
+
+Refer to the [functions.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/functions.prompty) file for more examples.
+
+```yaml
+---
+name: Image Processing Prompt
+description: A prompt that processes image data
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    tools:
+    - type: function
+      function:
+        name: process_image
+        description: Process an image and return details
+        parameters:
+          properties:
+            image:
+              description: Base64 encoded image data
+              type: string
+          required:
+          - image
+          type: object
+sample:
+  image: "base64_encoded_image_data"
+---
+system:
+You are an AI assistant that processes images.
+user:
+Please process the following image: {{image}}
+```
+
+### 3. Working with JSON Data from Local File
+
+Prompty can load JSON data from a local file using the `file` type.
+
+Refer to the [context.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/context.prompty) file for more examples.
+
+```yaml
+---
+name: JSON Data Prompt
+description: A prompt that uses JSON data from a local file
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+inputs: ${file:data.json}
+---
+system:
+You are an AI assistant that processes JSON data.
+user:
+Please process the following data: {{inputs}}
+```
+
+### 4. Using Sample JSON Files
+
+Prompty can use sample JSON files to provide example inputs.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: Sample JSON Prompt
+description: A prompt that uses sample JSON files
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  data: ${file:sample.json}
+---
+system:
+You are an AI assistant that processes sample JSON data.
+user:
+Please process the following sample data: {{data}}
+```
+
+### 5. Writing Inline Functions for Invokers
+
+Prompty allows writing inline functions for invokers to extend functionality.
+
+Refer to the [functions.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/functions.prompty) file for more examples.
+
+```yaml
+---
+name: Inline Function Prompt
+description: A prompt that uses inline functions for invokers
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    tools:
+    - type: function
+      function:
+        name: custom_function
+        description: A custom inline function
+        parameters:
+          properties:
+            input:
+              description: Input data for the function
+              type: string
+          required:
+          - input
+          type: object
+sample:
+  input: "example input data"
+---
+system:
+You are an AI assistant that uses custom functions.
+user:
+Please process the following input using the custom function: {{input}}
+```
+
+### 6. Serverless Example
+
+Prompty can be configured to use serverless models.
+
+Refer to the [serverless.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/serverless.prompty) file for more examples.
+
+```yaml
+---
+name: Serverless Example
+description: A prompt that uses a serverless model
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    type: serverless
+    endpoint: https://models.inference.ai.azure.com
+    model: Mistral-small
+    key: ${env:SERVERLESS_KEY:KEY}
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 7. OpenAI Example
+
+Prompty can be configured to use OpenAI models.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: OpenAI Example
+description: A prompt that uses an OpenAI model
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    type: openai
+    api_key: ${env:OPENAI_API_KEY}
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 8. Azure Example
+
+Prompty can be configured to use Azure models.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: Azure Example
+description: A prompt that uses an Azure model
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 9. Safety Instructions
+
+Prompty can include safety instructions to ensure safe responses.
+
+Refer to the [context.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/context.prompty) file for more examples.
+
+```yaml
+---
+name: Safety Instructions Example
+description: A prompt that includes safety instructions
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+# Safety
+- You should always reference factual statements to search results based on relevant documents.
+- Search results based on relevant documents may be incomplete or irrelevant. Do not make assumptions beyond strictly what's returned.
+- If the search results do not contain sufficient information to answer the user message completely, only use facts from the search results and do not add any information by yourself.
+- Avoid being vague, controversial, or off-topic.
+user:
+{{question}}
+```
+
+### 10. Mode Configuration
+
+Prompty can be configured to use different modes.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: Mode Configuration Example
+description: A prompt that uses different modes
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    mode: debug
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 11. Custom Template Example
+
+Prompty can use custom templates for responses.
+
+Refer to the [basic_mustache.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic_mustache.prompty) file for more examples.
+
+```yaml
+---
+name: Custom Template Example
+description: A prompt that uses a custom template
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+template:
+  format: mustache
+  parser: prompty
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 12. Multi-Function Example
+
+Prompty can use multiple functions in a single prompt.
+
+Refer to the [functions.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/functions.prompty) file for more examples.
+
+```yaml
+---
+name: Multi-Function Example
+description: A prompt that uses multiple functions
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    tools:
+    - type: function
+      function:
+        name: get_current_weather
+        description: Get the current weather in a given location
+        parameters:
+          properties:
+            location:
+              description: The city and state or city and country, e.g. San Francisco, CA or Tokyo, Japan
+              type: string
+          required:
+          - location
+          type: object
+    - type: function
+      function:
+        name: create_a_picture
+        description: Creates a picture based on a description given by the user.
+        parameters:
+          properties:
+            prompt:
+              description: The description of what the picture should be
+              type: string
+          required:
+          - prompt
+          type: object
+sample:
+  location: "San Francisco, CA"
+  prompt: "a drawing of a cat"
+---
+system:
+You are a helpful assistant that uses multiple functions.
+user:
+Please get the current weather in {{location}} and create a picture based on the following description: {{prompt}}
+```
+
+### 13. Streaming Example
+
+Prompty can be configured to use streaming responses.
+
+Refer to the [streaming.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/streaming.prompty) file for more examples.
+
+```yaml
+---
+name: Streaming Example
+description: A prompt that uses streaming responses
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    stream: true
+    stream_options:
+      include_usage: true
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 14. Contextual Example
+
+Prompty can use context to provide more personalized responses.
+
+Refer to the [context.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/context.prompty) file for more examples.
+
+```yaml
+---
+name: Contextual Example
+description: A prompt that uses context to provide personalized responses
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  firstName: Jane
+  lastName: Doe
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+# Customer
+You are helping {{firstName}} {{lastName}} to find answers to their questions.
+Use their name to address them in your responses.
+user:
+{{question}}
+```
+
+### 15. JSON Output Example
+
+Prompty can return responses in JSON format.
+
+Refer to the [basic_json_output.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic_json_output.prompty) file for more examples.
+
+```yaml
+---
+name: JSON Output Example
+description: A prompt that returns responses in JSON format
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+Return the response in JSON format.
+user:
+{{question}}
+```
+
+### 16. Function Chaining Example
+
+Prompty can chain multiple functions together.
+
+Refer to the [functions.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/functions.prompty) file for more examples.
+
+```yaml
+---
+name: Function Chaining Example
+description: A prompt that chains multiple functions together
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    tools:
+    - type: function
+      function:
+        name: get_current_weather
+        description: Get the current weather in a given location
+        parameters:
+          properties:
+            location:
+              description: The city and state or city and country, e.g. San Francisco, CA or Tokyo, Japan
+              type: string
+          required:
+          - location
+          type: object
+    - type: function
+      function:
+        name: create_a_picture
+        description: Creates a picture based on a description given by the user.
+        parameters:
+          properties:
+            prompt:
+              description: The description of what the picture should be
+              type: string
+          required:
+          - prompt
+          type: object
+sample:
+  location: "San Francisco, CA"
+  prompt: "a drawing of a cat"
+---
+system:
+You are a helpful assistant that chains multiple functions together.
+user:
+Please get the current weather in {{location}} and create a picture based on the following description: {{prompt}}
+```
+
+### 17. Custom Configuration Example
+
+Prompty can use custom configurations for models.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: Custom Configuration Example
+description: A prompt that uses custom configurations for models
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    max_tokens: 1000
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 18. Multi-Author Example
+
+Prompty can include multiple authors in the metadata.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: Multi-Author Example
+description: A prompt that includes multiple authors
+authors:
+  - author_1
+  - author_2
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 19. Tagging Example
+
+Prompty can include tags in the metadata.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: Tagging Example
+description: A prompt that includes tags in the metadata
+authors:
+  - example_author
+tags:
+  - tag1
+  - tag2
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
+
+### 20. Versioning Example
+
+Prompty can include version information in the metadata.
+
+Refer to the [basic.prompty](#filepath: /workspaces/prompty/runtime/promptycs/Prompty.Core.Tests/prompty/basic.prompty) file for more examples.
+
+```yaml
+---
+name: Versioning Example
+description: A prompt that includes version information
+authors:
+  - example_author
+version: 1.0.0
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
+```
