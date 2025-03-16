@@ -18,12 +18,12 @@ Download the [VS Code extension here](https://marketplace.visualstudio.com/items
 
 ## VSCode Extension Features
 ### Quickly Create
-Quickly create a basic prompty by right-clicking in the VS Code explorer and selecting "New Prompty."
+Quickly create a basic Prompty by right-clicking in the VS Code explorer and selecting "New Prompty."
 
 ![Quick Create](image-2.png)
 
 ### Preview
-Preview prompty similar to markdown with dynamic template rendering while typing, allowing you to see the prompt that will be sent to the model.
+Preview Prompty similar to markdown with dynamic template rendering while typing, allowing you to see the prompt that will be sent to the model.
 
 ![Preview](readme_preview.png)
 
@@ -35,14 +35,14 @@ Preview prompty similar to markdown with dynamic template rendering while typing
 
   ![Switch Model Configuration](switchModelConfiguration.png)
 * Use VS Code settings to define model configuration at:
-  * User level for use across different prompty files.
+  * User level for use across different Prompty files.
   * Workspace level to share with team members via Git.
 
     ![ModelConfigurationSettings](modelConfigurationSettings.png)
 
 * We strongly encourage using Azure Active Directory authentication for enhanced security. Leave the `api_key` empty to trigger AAD auth.
 * OpenAI is also supported. You can store the key in VSCode settings or use `${env:xxx}` to read the API key from an environment variable.
-  * You can put environment variables in `.env` file, in the same folder of the prompty file, or in the workspace root folder.
+  * You can put environment variables in a `.env` file, in the same folder as the Prompty file, or in the workspace root folder.
   * Alternatively, you can also specify it in system variables, follow [OpenAI's Guide](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety) for key safety, setting it through Control Panel/zsh/bash, and then restart VS Code to load new values.
 
 ### Quick Run

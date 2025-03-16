@@ -17,7 +17,7 @@ This guide explains how to use Prompty templates with the [LangChain framework](
 
 ## What is LangChain
 
-[LangChain](https://python.langchain.com/docs/introduction/) is a composable framework for building context-aware, reasoning applications pwoered by large language models, and using your organization's data and APIs. It has an [extensive set of integrations](https://python.langchain.com/docs/integrations/providers/) with both plaforms ([like AzureAI](https://python.langchain.com/api_reference/azure_ai/)) and tools (like [Prompty](https://python.langchain.com/docs/integrations/providers/microsoft/)) - allowing you to work seamlessly with a diverse set of model providers and integrations.
+[LangChain](https://python.langchain.com/docs/introduction/) is a composable framework for building context-aware, reasoning applications powered by large language models, and using your organization's data and APIs. It has an [extensive set of integrations](https://python.langchain.com/docs/integrations/providers/) with both platforms ([like AzureAI](https://python.langchain.com/api_reference/azure_ai/)) and tools (like [Prompty](https://python.langchain.com/docs/integrations/providers/microsoft/)) - allowing you to work seamlessly with a diverse set of model providers and integrations.
 
 > Explore these resources ·  [Microsoft Integrations](https://python.langchain.com/docs/integrations/providers/microsoft/) · [`langchain-prompty` docs](https://python.langchain.com/api_reference/prompty/) ·  [`langchain-prompty` package](https://pypi.org/project/langchain-prompty/) ·  [`langchain-prompty` source](https://github.com/langchain-ai/langchain/tree/master/libs/partners/prompty) 
 
@@ -129,7 +129,7 @@ Let's use this to refactor our previous example to use Prompty.
     system:
     You are a helpful and friendly assistant with a great sense of humor.
     You address users by name and always start with a joke or fun fact.
-    You then amswer their questions in a concise and personable manner
+    You then answer their questions in a concise and personable manner
     You even add some personal flair with appropriate emojis.
 
     {% for item in chat_history %}
@@ -312,10 +312,10 @@ In _this_ section, we'll focus on using the extension to convert the `.prompty` 
 > **Observe the following**
 
 1. The code is similar to the previous step, with minor differences in setting the default model and input arguments.
-1. The prompty asset includes default `context`, providing grounding for the response. This example shows how to extend the sample for retrieval augmented generation with inputs from other service integrations.
+1. The Prompty asset includes default `context`, providing grounding for the response. This example shows how to extend the sample for retrieval augmented generation with inputs from other service integrations.
 1. The process demonstrates how parameters are overridden from asset to runtime. The asset specifies defaults for the model configuration (`azure_openai`), but the execution chain uses a different model (`openai`), which takes precedence.
 
-> **For Reference** - the prompty and python files described in this tutorial are also available as file assets under the `web/docs/assets/code` folder in the codebase.> 
+> **For Reference** - the Prompty and Python files described in this tutorial are also available as file assets under the `web/docs/assets/code` folder in the codebase.> 
 
 ---
 
