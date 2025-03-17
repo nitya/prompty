@@ -2294,16 +2294,11 @@
 <h3 id="parameter-hoisting">Parameter Hoisting<a class="headerlink" href="#parameter-hoisting" title="Permanent link">&para;</a></h3>
 <p>Parameter hoisting is a mechanism in Prompty that allows for the merging of global and local configurations. It ensures that the most specific configuration settings are applied during prompt execution. This process involves combining configurations from different levels (e.g., global, user, workspace, and asset) to determine the final configuration used for execution.</p>
 <h4 id="parameter-hoisting-diagram">Parameter Hoisting Diagram<a class="headerlink" href="#parameter-hoisting-diagram" title="Permanent link">&para;</a></h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>graph TD
+<pre class="mermaid"><code>graph TD
     A[Global Configuration] --&gt;|Merge| B[User Configuration]
     B --&gt;|Merge| C[Workspace Configuration]
     C --&gt;|Merge| D[Asset Configuration]
-    D --&gt;|Final Configuration| E[Execution]
-</code></pre></div></td></tr></table></div>
+    D --&gt;|Final Configuration| E[Execution]</code></pre>
 <h3 id="usage-scenarios">Usage Scenarios<a class="headerlink" href="#usage-scenarios" title="Permanent link">&para;</a></h3>
 <h4 id="scenario-1-default-configuration">Scenario 1: Default Configuration<a class="headerlink" href="#scenario-1-default-configuration" title="Permanent link">&para;</a></h4>
 <p>In this scenario, only the global configuration is defined. The final configuration will use the global settings.</p>
