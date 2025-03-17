@@ -22,15 +22,15 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
-        <title>1. Prompty Invoker 🟠 - Documentation</title>
+        <title>1. Prompty Invoker 🟢 - Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Prompty Invoker 🟠
+              1. Prompty Invoker 🟢
             
           </span>
         </div>
@@ -873,6 +873,8 @@
       
         
       
+        
+      
     
     
       
@@ -916,7 +918,7 @@
         
   
   <span class="md-ellipsis">
-    Guides 🔴
+    Guides 🟢
     
   </span>
   
@@ -947,7 +949,7 @@
           
   
   <span class="md-ellipsis">
-    1. Prompty Invoker 🟠
+    1. Prompty Invoker 🟢
     
   </span>
   
@@ -959,7 +961,7 @@
         
   
   <span class="md-ellipsis">
-    1. Prompty Invoker 🟠
+    1. Prompty Invoker 🟢
     
   </span>
   
@@ -984,9 +986,195 @@
         <li class="md-nav__item">
   <a href="#1-prompty-invokers" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Prompty invokers
+      1. Prompty Invokers
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-how-invokers-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. How Invokers Work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. How Invokers Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invoker-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invoker Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in-invokers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Invokers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-invokers-are-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. How Invokers Are Used
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. How Invokers Are Used">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-invoker-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Invoker Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openai-invoker-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAI Invoker Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-invoker-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless Invoker Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creating-a-custom-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creating a Custom Invoker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creating a Custom Invoker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-the-invoker-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Define the Invoker Class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-register-the-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Register the Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-use-the-custom-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Use the Custom Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-prompty-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example .Prompty File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-hugging-face-invoker-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Hugging Face Invoker Tutorial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Hugging Face Invoker Tutorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-define-the-invoker-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Define the Invoker Class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-register-the-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Register the Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-use-the-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Use the Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-basic_hfprompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example : basic_hf.prompty
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1010,7 +1198,7 @@
         
   
   <span class="md-ellipsis">
-    2. Prompty Runtime 🟠
+    2. Prompty Runtime 🟢
     
   </span>
   
@@ -1055,6 +1243,28 @@
   
   <span class="md-ellipsis">
     4. Prompty Observability 🟢
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Prompty Cookbook 🟢
     
   </span>
   
@@ -1995,9 +2205,195 @@
         <li class="md-nav__item">
   <a href="#1-prompty-invokers" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Prompty invokers
+      1. Prompty Invokers
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-how-invokers-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. How Invokers Work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. How Invokers Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invoker-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invoker Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built-in-invokers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Invokers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-invokers-are-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. How Invokers Are Used
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. How Invokers Are Used">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-invoker-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Invoker Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openai-invoker-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAI Invoker Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-invoker-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless Invoker Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creating-a-custom-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creating a Custom Invoker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Creating a Custom Invoker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-the-invoker-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Define the Invoker Class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-register-the-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Register the Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-use-the-custom-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Use the Custom Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-prompty-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example .Prompty File
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-hugging-face-invoker-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Hugging Face Invoker Tutorial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Hugging Face Invoker Tutorial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-define-the-invoker-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Define the Invoker Class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-register-the-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Register the Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-use-the-invoker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Use the Invoker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-basic_hfprompty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example : basic_hf.prompty
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2020,21 +2416,287 @@
   
 
 
-<h1 id="1-prompty-invoker">1. <a href="https://www.prompty.ai/docs/guides/prompty-invoker">Prompty Invoker</a> 🟠<a class="headerlink" href="#1-prompty-invoker" title="Permanent link">&para;</a></h1>
+<h1 id="1-prompty-invoker">1. <a href="https://www.prompty.ai/docs/guides/prompty-invoker">Prompty Invoker</a> 🟢<a class="headerlink" href="#1-prompty-invoker" title="Permanent link">&para;</a></h1>
 <div class="admonition quote">
 <p class="admonition-title"><strong>BACKLOG</strong> - Use this area to identify issues or changes to make</p>
 </div>
 <hr />
 <p><em>In this section, we cover the different built-in Prompty Invokers and walk you through how you can build your own custom invoker.</em></p>
-<h2 id="1-prompty-invokers">1. Prompty invokers<a class="headerlink" href="#1-prompty-invokers" title="Permanent link">&para;</a></h2>
-<p>The Prompty runtime comes with a set of built-in invokers that can be used to execute external models and APIs. 
-Invokers trigger a call to a the different models and return its output ensuring standardization when it comes to handling models. The invokers currently supported are:</p>
+<hr />
+<h2 id="1-prompty-invokers">1. Prompty Invokers<a class="headerlink" href="#1-prompty-invokers" title="Permanent link">&para;</a></h2>
+<p>The Prompty runtime comes with a set of built-in invokers that can be used to execute external models and APIs. Invokers trigger a call to the different models and return their output, ensuring standardization when it comes to handling models. The invokers currently supported are:</p>
 <ol>
 <li><strong>azure</strong>: Invokes the Azure OpenAI API</li>
 <li><strong>openai</strong>: Invokes the OpenAI API</li>
-<li><strong>serverless</strong>: Invokes serverless models (e.g. GitHub Models) using the Azure AI Inference client library (currently only key based authentication is supported with more managed identity support coming soon)</li>
+<li><strong>serverless</strong>: Invokes serverless models (e.g., GitHub Models) using the Azure AI Inference client library (currently only key-based authentication is supported with more managed identity support coming soon)</li>
 </ol>
-<p>TODO: Explain how invokers work and how to build a custom invoker</p>
+<hr />
+<h2 id="2-how-invokers-work">2. How Invokers Work<a class="headerlink" href="#2-how-invokers-work" title="Permanent link">&para;</a></h2>
+<p>Invokers in Prompty are responsible for executing prompts against specified models or APIs. They ensure that the necessary configurations and inputs are correctly handled, making it possible to integrate prompt execution seamlessly into applications. Each invoker follows a standard interface, which includes methods for synchronous and asynchronous invocation.</p>
+<h3 id="invoker-interface">Invoker Interface<a class="headerlink" href="#invoker-interface" title="Permanent link">&para;</a></h3>
+<p>An invoker must implement the following methods:</p>
+<ul>
+<li><code>invoke(data: any): Promise&lt;any&gt;</code>: Asynchronous method to invoke the invoker.</li>
+<li><code>invokeSync(data: any): any</code>: Synchronous method to invoke the invoker.</li>
+</ul>
+<h3 id="built-in-invokers">Built-in Invokers<a class="headerlink" href="#built-in-invokers" title="Permanent link">&para;</a></h3>
+<p>Prompty provides several built-in invokers:</p>
+<ul>
+<li><strong>AzureInvoker</strong>: Executes prompts using the Azure OpenAI API.</li>
+<li><strong>OpenAIInvoker</strong>: Executes prompts using the OpenAI API.</li>
+<li><strong>ServerlessInvoker</strong>: Executes prompts using serverless models.</li>
+</ul>
+<hr />
+<h2 id="3-how-invokers-are-used">3. How Invokers Are Used<a class="headerlink" href="#3-how-invokers-are-used" title="Permanent link">&para;</a></h2>
+<h3 id="azure-invoker-example">Azure Invoker Example<a class="headerlink" href="#azure-invoker-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># filepath: /workspaces/prompty/examples/azure.prompty</span>
+<span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">  </span><span class="no">What is the weather like in {{city}}?</span>
+<span class="nt">model</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">api</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure</span>
+<span class="w">  </span><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://api.openai.azure.com/v1/engines/davinci/completions&quot;</span>
+<span class="w">    </span><span class="nt">apiKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR_AZURE_API_KEY&quot;</span>
+<span class="nt">sample</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">city</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Seattle</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="openai-invoker-example">OpenAI Invoker Example<a class="headerlink" href="#openai-invoker-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># filepath: /workspaces/prompty/examples/openai.prompty</span>
+<span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">  </span><span class="no">Write a poem about {{subject}}.</span>
+<span class="nt">model</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">api</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openai</span>
+<span class="w">  </span><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">apiKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR_OPENAI_API_KEY&quot;</span>
+<span class="nt">sample</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">subject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nature</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="serverless-invoker-example">Serverless Invoker Example<a class="headerlink" href="#serverless-invoker-example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># filepath: /workspaces/prompty/examples/serverless.prompty</span>
+<span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">  </span><span class="no">Summarize the following text: {{text}}</span>
+<span class="nt">model</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">api</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serverless</span>
+<span class="w">  </span><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://api.github.com/models/summarize&quot;</span>
+<span class="w">    </span><span class="nt">apiKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;YOUR_SERVERLESS_API_KEY&quot;</span>
+<span class="nt">sample</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Serverless</span><span class="nv"> </span><span class="s">computing</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud-computing</span><span class="nv"> </span><span class="s">execution</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">dynamically</span><span class="nv"> </span><span class="s">manages</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">allocation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">machine</span><span class="nv"> </span><span class="s">resources.&quot;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="4-creating-a-custom-invoker">4. Creating a Custom Invoker<a class="headerlink" href="#4-creating-a-custom-invoker" title="Permanent link">&para;</a></h2>
+<p>Creating a custom invoker involves extending the <code>Invoker</code> class and implementing the required methods. Below is a step-by-step guide to creating a custom invoker.</p>
+<h3 id="step-1-define-the-invoker-class">Step 1: Define the Invoker Class<a class="headerlink" href="#step-1-define-the-invoker-class" title="Permanent link">&para;</a></h3>
+<p>Create a new class that extends the <code>Invoker</code> class and implement the <code>invoke</code> and <code>invokeSync</code> methods.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Invoker</span><span class="p">,</span><span class="w"> </span><span class="nx">Prompty</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;prompty&quot;</span><span class="p">;</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">CustomInvoker</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Invoker</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">prompty</span><span class="o">:</span><span class="w"> </span><span class="kt">Prompty</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="nx">prompty</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">invoke</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Custom logic for asynchronous invocation</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">invokeSync</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Custom logic for synchronous invocation</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-2-register-the-invoker">Step 2: Register the Invoker<a class="headerlink" href="#step-2-register-the-invoker" title="Permanent link">&para;</a></h3>
+<p>Register the custom invoker with the <code>InvokerFactory</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;prompty&quot;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
+<span class="nx">factory</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">CustomInvoker</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-3-use-the-custom-invoker">Step 3: Use the Custom Invoker<a class="headerlink" href="#step-3-use-the-custom-invoker" title="Permanent link">&para;</a></h3>
+<p>Use the custom invoker in your application.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Prompty</span><span class="p">,</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;prompty&quot;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">prompty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Prompty</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">factory</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">prompty</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="example-prompty-file">Example <code>.Prompty</code> File<a class="headerlink" href="#example-prompty-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">YAML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># filepath: /workspaces/prompty/examples/custom.prompty</span>
+<span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">  </span><span class="no">Hello, {{name}}!</span>
+<span class="nt">model</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">api</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span>
+<span class="w">  </span><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom</span>
+<span class="nt">sample</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">World</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="5-hugging-face-invoker-tutorial">5. Hugging Face Invoker Tutorial<a class="headerlink" href="#5-hugging-face-invoker-tutorial" title="Permanent link">&para;</a></h2>
+<p>In this section, we will create a custom invoker for Hugging Face models.</p>
+<h3 id="step-1-install-dependencies">Step 1: Install Dependencies<a class="headerlink" href="#step-1-install-dependencies" title="Permanent link">&para;</a></h3>
+<p>Install the necessary dependencies.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>@huggingface/hub
+</code></pre></div></td></tr></table></div>
+<h3 id="step-2-define-the-invoker-class">Step 2: Define the Invoker Class<a class="headerlink" href="#step-2-define-the-invoker-class" title="Permanent link">&para;</a></h3>
+<p>Create a new class that extends the <code>Invoker</code> class and implements the required methods.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Invoker</span><span class="p">,</span><span class="w"> </span><span class="nx">Prompty</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;prompty&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">HfInference</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@huggingface/hub&quot;</span><span class="p">;</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">HuggingFaceInvoker</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Invoker</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">hf</span><span class="o">:</span><span class="w"> </span><span class="kt">HfInference</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">prompty</span><span class="o">:</span><span class="w"> </span><span class="kt">Prompty</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="nx">prompty</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">hf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">HfInference</span><span class="p">(</span><span class="s2">&quot;YOUR_HUGGING_FACE_API_KEY&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">async</span><span class="w"> </span><span class="nx">invoke</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">hf</span><span class="p">.</span><span class="nx">textGeneration</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;gpt2&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">inputs</span><span class="o">:</span><span class="w"> </span><span class="kt">data.prompt</span><span class="p">,</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">invokeSync</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">&quot;Synchronous invocation is not supported for Hugging Face models.&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-3-register-the-invoker">Step 3: Register the Invoker<a class="headerlink" href="#step-3-register-the-invoker" title="Permanent link">&para;</a></h3>
+<p>Register the Hugging Face invoker with the <code>InvokerFactory</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;prompty&quot;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
+<span class="nx">factory</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">&quot;huggingface&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">HuggingFaceInvoker</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-4-use-the-invoker">Step 4: Use the Invoker<a class="headerlink" href="#step-4-use-the-invoker" title="Permanent link">&para;</a></h3>
+<p>Use the Hugging Face invoker in your application.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Prompty</span><span class="p">,</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;prompty&quot;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">prompty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Prompty</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">InvokerFactory</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prompt</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Once upon a time&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">factory</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s2">&quot;huggingface&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">prompty</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="example-basic_hfprompty">Example : <code>basic_hf.prompty</code><a class="headerlink" href="#example-basic_hfprompty" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code># filepath: /workspaces/prompty/examples/basic_hf.prompty
+template: |
+  Generate a story based on the following prompt: {{prompt}}
+model:
+  api: huggingface
+  configuration:
+    model: gpt2
+sample:
+  prompt: Once upon a time
+</code></pre></div></td></tr></table></div>
 <hr />
 <p><a href="/docs/contributing/">Want to Contribute To the Project?</a> - <em>Updated Guidance Coming Soon</em>.</p>
 
@@ -2076,7 +2738,7 @@ Invokers trigger a call to a the different models and return its output ensuring
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../00/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Guides 🔴">
+          <a href="../00/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Guides 🟢">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2086,20 +2748,20 @@ Invokers trigger a call to a the different models and return its output ensuring
                 Previous
               </span>
               <div class="md-ellipsis">
-                Guides 🔴
+                Guides 🟢
               </div>
             </div>
           </a>
         
         
           
-          <a href="../02/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Prompty Runtime 🟠">
+          <a href="../02/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Prompty Runtime 🟢">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                2. Prompty Runtime 🟠
+                2. Prompty Runtime 🟢
               </div>
             </div>
             <div class="md-footer__button md-icon">

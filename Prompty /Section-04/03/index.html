@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -873,6 +873,8 @@
       
         
       
+        
+      
     
     
       
@@ -916,7 +918,7 @@
         
   
   <span class="md-ellipsis">
-    Guides 🔴
+    Guides 🟢
     
   </span>
   
@@ -938,7 +940,7 @@
         
   
   <span class="md-ellipsis">
-    1. Prompty Invoker 🟠
+    1. Prompty Invoker 🟢
     
   </span>
   
@@ -960,7 +962,7 @@
         
   
   <span class="md-ellipsis">
-    2. Prompty Runtime 🟠
+    2. Prompty Runtime 🟢
     
   </span>
   
@@ -1106,6 +1108,28 @@
   
   <span class="md-ellipsis">
     4. Prompty Observability 🟢
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Prompty Cookbook 🟢
     
   </span>
   
@@ -2132,37 +2156,37 @@
 <p>Download the <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.prompty">VS Code extension here</a>.</p>
 <h2 id="vscode-extension-features">VSCode Extension Features<a class="headerlink" href="#vscode-extension-features" title="Permanent link">&para;</a></h2>
 <h3 id="quickly-create">Quickly Create<a class="headerlink" href="#quickly-create" title="Permanent link">&para;</a></h3>
-<p>Quickly create a basic prompty by right-clicking in the VS Code explorer and selecting "New Prompty."</p>
-<p><img alt="Quick Create" src="../../img/image-2.png" /></p>
+<p>Quickly create a basic Prompty by right-clicking in the VS Code explorer and selecting "New Prompty."</p>
+<p><img alt="Quick Create" src="../../assets/img/image-2.png" /></p>
 <h3 id="preview">Preview<a class="headerlink" href="#preview" title="Permanent link">&para;</a></h3>
-<p>Preview prompty similar to markdown with dynamic template rendering while typing, allowing you to see the prompt that will be sent to the model.</p>
-<p><img alt="Preview" src="../../img/readme_preview.png" /></p>
+<p>Preview Prompty similar to markdown with dynamic template rendering while typing, allowing you to see the prompt that will be sent to the model.</p>
+<p><img alt="Preview" src="../../assets/img/readme_preview.png" /></p>
 <h3 id="define-and-switch-model-configurations">Define and Switch Model Configurations<a class="headerlink" href="#define-and-switch-model-configurations" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Define your model configurations directly in VS Code.</li>
 <li>Quickly switch between different model configurations.</li>
 </ul>
-<p><img alt="Define Configuration" src="../../img/image-5.png" /></p>
-<p><img alt="Switch Model Configuration" src="../../img/switchModelConfiguration.png" />
+<p><img alt="Define Configuration" src="../../assets/img/image-5.png" /></p>
+<p><img alt="Switch Model Configuration" src="../../assets/img/switchModelConfiguration.png" />
 * Use VS Code settings to define model configuration at:
-  * User level for use across different prompty files.
+  * User level for use across different Prompty files.
   * Workspace level to share with team members via Git.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>![ModelConfigurationSettings](./../img/modelConfigurationSettings.png)
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>![ModelConfigurationSettings](./../assets/img/modelConfigurationSettings.png)
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>We strongly encourage using Azure Active Directory authentication for enhanced security. Leave the <code>api_key</code> empty to trigger AAD auth.</li>
 <li>OpenAI is also supported. You can store the key in VSCode settings or use <code>${env:xxx}</code> to read the API key from an environment variable.</li>
-<li>You can put environment variables in <code>.env</code> file, in the same folder of the prompty file, or in the workspace root folder.</li>
+<li>You can put environment variables in a <code>.env</code> file, in the same folder as the Prompty file, or in the workspace root folder.</li>
 <li>Alternatively, you can also specify it in system variables, follow <a href="https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety">OpenAI's Guide</a> for key safety, setting it through Control Panel/zsh/bash, and then restart VS Code to load new values.</li>
 </ul>
 <h3 id="quick-run">Quick Run<a class="headerlink" href="#quick-run" title="Permanent link">&para;</a></h3>
 <p>Hit <strong>F5</strong> or click the <strong>Run</strong> button at the top. There are two output windows:
 * <strong>Prompty Output</strong> shows a concise view.</p>
-<p><img alt="Prompty Output" src="../../img/image-3.png" /></p>
+<p><img alt="Prompty Output" src="../../assets/img/image-3.png" /></p>
 <ul>
 <li><strong>Prompty Output (Verbose)</strong> shows detailed requests sent and received.</li>
 </ul>
-<p><img alt="Prompty Output (Verbose)" src="../../img/image-8.png" /></p>
+<p><img alt="Prompty Output (Verbose)" src="../../assets/img/image-8.png" /></p>
 <hr />
 <p><a href="/docs/contributing/">Want to Contribute To the Project?</a> - <em>Updated Guidance Coming Soon</em>.</p>
 
@@ -2204,7 +2228,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../02/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Prompty Runtime 🟠">
+          <a href="../02/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Prompty Runtime 🟢">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2214,7 +2238,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                2. Prompty Runtime 🟠
+                2. Prompty Runtime 🟢
               </div>
             </div>
           </a>

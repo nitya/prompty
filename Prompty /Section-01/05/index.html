@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -975,6 +975,8 @@
       
         
       
+        
+      
     
     
       
@@ -1020,7 +1022,7 @@
         
   
   <span class="md-ellipsis">
-    Guides 🔴
+    Guides 🟢
     
   </span>
   
@@ -1042,7 +1044,7 @@
         
   
   <span class="md-ellipsis">
-    1. Prompty Invoker 🟠
+    1. Prompty Invoker 🟢
     
   </span>
   
@@ -1064,7 +1066,7 @@
         
   
   <span class="md-ellipsis">
-    2. Prompty Runtime 🟠
+    2. Prompty Runtime 🟢
     
   </span>
   
@@ -1109,6 +1111,28 @@
   
   <span class="md-ellipsis">
     4. Prompty Observability 🟢
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Section-04/05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Prompty Cookbook 🟢
     
   </span>
   
@@ -2270,13 +2294,13 @@ user:
 <blockquote>
 <p><strong>Note:</strong> it may take a while for the trace output to appear, and you may need to click several runs before seeing the full trace.</p>
 </blockquote>
-<p><img alt="Trace Output" src="../../img/trace-output.png" /></p>
+<p><img alt="Trace Output" src="../../assets/img/trace-output.png" /></p>
 <p>From the trace output, you can see the inputs, outputs and metrics such as time to execute the prompt and tokens. This information can be used to debug and fix any issues in your code. For example, we can see output has been truncated and the <code>Completion Tokens</code> count is less than 1000, which might not be sufficent for the prompt to generate different outputs. We can increase the <code>max_tokens</code> in our Prompty to 1000 to generate more tokens. Once done, run the code again and confirm you get 5 examples of the short message inviting friends to a Game Night.</p>
-<p><img alt="updated trace output" src="../../img/trace-bug-fixed.png" /></p>
+<p><img alt="updated trace output" src="../../assets/img/trace-bug-fixed.png" /></p>
 <p>You can continue experimenting with different parameters such as <code>temperature</code> and observe how it affects the model outputs.</p>
 <h2 id="6-using-observability-for-model-selection">6. Using observability for Model Selection<a class="headerlink" href="#6-using-observability-for-model-selection" title="Permanent link">&para;</a></h2>
 <p>Another way to make the most of observability is in Model Selection. You can switch between models and observe their performance such as completion tokens, latency and accuracy for different tasks. For example, you can switch between the <code>gpt-4o</code> and <code>gpt-35-turbo</code> models and observe the performance of each model. You can also leverage on GitHub Models, Azure OpenAI and other models to observe the performance of each model. Below is a comparison of the trace output for the <code>gpt-4o</code> and <code>gpt-35-turbo</code> models:</p>
-<p><img alt="grpt-35-turbo output" src="../../img/gpt-35-turbo-trace.png" /></p>
+<p><img alt="grpt-35-turbo output" src="../../assets/img/gpt-35-turbo-trace.png" /></p>
 <p>From the output, you can see the difference in the completion tokens and the time taken to execute the prompt. This information can be used to select the best model for your use case.</p>
 <h2 id="7-building-a-custom-tracer-in-prompty">7. Building a Custom Tracer in Prompty<a class="headerlink" href="#7-building-a-custom-tracer-in-prompty" title="Permanent link">&para;</a></h2>
 <p>In the guides section, we will provide a deep dive into <a href="/docs/guides/prompty-observability">Observability in Prompty</a> and how you can create your own tracer.</p>

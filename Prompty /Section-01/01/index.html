@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -972,6 +972,8 @@
       
         
       
+        
+      
     
     
       
@@ -1017,7 +1019,7 @@
         
   
   <span class="md-ellipsis">
-    Guides 🔴
+    Guides 🟢
     
   </span>
   
@@ -1039,7 +1041,7 @@
         
   
   <span class="md-ellipsis">
-    1. Prompty Invoker 🟠
+    1. Prompty Invoker 🟢
     
   </span>
   
@@ -1061,7 +1063,7 @@
         
   
   <span class="md-ellipsis">
-    2. Prompty Runtime 🟠
+    2. Prompty Runtime 🟢
     
   </span>
   
@@ -1106,6 +1108,28 @@
   
   <span class="md-ellipsis">
     4. Prompty Observability 🟢
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Section-04/05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Prompty Cookbook 🟢
     
   </span>
   
@@ -2130,7 +2154,7 @@
 <p><em>In this section, we cover the core building blocks of Prompty (specification, tooling, and runtime) and walk you through the developer flow and mindset for going from "prompt" to "prototype"</em>.</p>
 <h2 id="1-prompty-components">1. Prompty Components<a class="headerlink" href="#1-prompty-components" title="Permanent link">&para;</a></h2>
 <p>The Prompty implementation consists of three core components - the <em>specification</em> (file format), the <em>tooling</em> (developer experience) and the <em>runtime</em> (executable code). Let's review these briefly.</p>
-<p><img alt="What is Prompty?" src="../../img/01-what-is-prompty.png" /></p>
+<p><img alt="What is Prompty?" src="../../assets/img/01-what-is-prompty.png" /></p>
 <h3 id="11-the-prompty-specification">1.1 The Prompty Specification<a class="headerlink" href="#11-the-prompty-specification" title="Permanent link">&para;</a></h3>
 <p>The <a href="https://github.com/microsoft/prompty/blob/main/Prompty.yaml">Prompty specification</a> defines the core <code>.prompty</code> asset file format. We'll look at this in more detail in the <a href="/docs/prompty-file-spec">Prompty File Spec</a> section of the documentation. For now, click to expand the section below to see a <em>basic.prompty</em> sample and get an intuitive sense for what an asset file looks like.</p>
 <details>
@@ -2234,14 +2258,14 @@ Enhanced runtimes add support for orchestration frameworks, enabling complex wor
 <li><strong>Develop</strong> by iterating config &amp; content, use tracing to debug</li>
 <li><strong>Evaluate</strong> prompts with AI assistance, saved locally or to cloud</li>
 </ol>
-<p><img alt="How do we use prompty?" src="../../img/02-build-with-prompty.png" /></p>
+<p><img alt="How do we use prompty?" src="../../assets/img/02-build-with-prompty.png" /></p>
 <h2 id="3-developer-mindset">3. Developer Mindset<a class="headerlink" href="#3-developer-mindset" title="Permanent link">&para;</a></h2>
 <p>As an AI application developer, you are likely already using a number of tools and frameworks to enhance your developer experience. So, where does Prompty fit into you developer toolchain? </p>
 <p>Think of it as a <strong>micro-orchestrator focused on a single LLM invocation</strong> putting it at a step above the basic <em>API call</em> and positioned to support more complex orchestration frameworks above it. With Prompty, you can:
  - <em>configure</em> the right model for that specific invocation
  - <em>engineer</em> the prompt (system, user, context, instructions) for that request
  - <em>shape</em> the data used to "render" the template on execution by the runtime</p>
-<p><img alt="Where does this fit?" src="../../img/03-micro-orchestrator-mindset.png" /></p>
+<p><img alt="Where does this fit?" src="../../assets/img/03-micro-orchestrator-mindset.png" /></p>
 <hr />
 <p><a href="/docs/contributing/">Want to Contribute To the Project?</a> - <em>Updated Guidance Coming Soon</em>.</p>
 
