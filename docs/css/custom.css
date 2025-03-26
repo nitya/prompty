@@ -11,3 +11,121 @@
 }
 
 /* --- Custom Overrides --- */
+
+/* Parallax Container */
+.parallax-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  height: 100vh; /* Ensure the container takes up the full viewport height */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh; /* set min height */
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 800px; /* match card width */
+  text-align: center;
+}
+
+#heroTitle {
+  font-size: 3em; /* Increased by 20% */
+  background: linear-gradient(to bottom, #0369a1,  #30CFD0, #292524); /* Vertical linear gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-padding {
+  padding-top: 25px; /* Adjust the padding value as needed */
+}
+
+.button {
+  background-color: #0369a1; /* Use light grey background */
+  color: white !important;
+  font-size: 1.2em; /* Increase font size by 20% */
+  padding: 12px 24px; /* Adjust padding to fit */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  transition: all 0.3s ease; /* Add transition for hover effect */
+}
+
+
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.hero-image {
+  /* Add your hero image styles here */
+}
+
+/* Card Section */
+.card-section {
+  min-height: 75vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: var(--md-primary-fg-color);
+}
+
+.card-content {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card-image {
+  width: 100%;
+  max-width: 100%; /* Make sure it doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.pulse-animation {
+  animation: pulse 1.5s 3; /* Adjust duration and iterations as needed */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.075);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
