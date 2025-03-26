@@ -1,0 +1,124 @@
+# General ...................................................
+site_name: Prompty Documentation
+site_url: https://nitya.github.io/prompty
+site_author: Nitya Narasimhan
+site_description: >-
+  Prompty Documentation Website Using Mkdocs-Material
+
+# Repository .................................................
+repo_name: microsoft/prompty
+repo_url: https://github.com/microsoft/prompty
+
+extra_css:
+  - css/custom.css
+extra_javascript:
+  - js/custom.js
+
+# Copyright ...................................................
+copyright: >
+  &copy; 2025 Microsoft &nbsp;|&nbsp;
+  <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy </a>&nbsp;|&nbsp;
+  <a href="https://go.microsoft.com/fwlink/?LinkId=2259814">Consumer Health Privacy </a>&nbsp;|&nbsp;
+  <a href="https://go.microsoft.com/fwlink/?LinkID=206977">Terms of Use </a>&nbsp;|&nbsp;
+  <a href="https://www.microsoft.com/trademarks">Trademarks </a>
+
+# Configuration ...............................................
+theme:
+  name: material
+  custom_dir: docs-overrides
+  font:
+    code: Roboto Mono  #Monospaced
+    text: Roboto       #Regular
+  logo: assets/logo.svg
+  favicon: assets/logo.png
+  language: en
+
+  # Theme Modes ...............................................
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-2
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference 
+
+  # Theme Features ...............................................
+  features:
+    - navigation.instant
+    - navigation.expand             # sidebar collapsible sections open
+    - navigation.instant.progress   # load progress indicator
+    - navigation.tracking           # tracks anchor tags in URL
+    - navigation.tabs               # tabbed on desktop, single in mobile    
+    - navigation.tabs.sticky        # tabs stick when scrolling downtheme:
+    - navigation.path               # add breadcrumbs
+    - navigation.indexes            # default index.md in folder is section page
+    - navigation.top
+    - toc.follow
+    - navigation.footer
+    - content.code.copy             # allow copy-paste from codeblocks
+    - content.tabs.link             # Ensures site-wide switch to same tab name
+
+# Extras  ...............................................
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/book
+      name: Prompty Documentation
+      link: https://prompty.ai
+    - icon: fontawesome/brands/github
+      name: Prompty Repository
+      link: https://github.com/microsoft/prompty
+    - icon: fontawesome/brands/discord
+      name: Prompty Repository
+      link: https://aka.ms/AzureAIFoundry/Discord 
+    - icon: fontawesome/brands/microsoft
+      name: Microsoft
+      link: https://aka.ms/microsoft
+
+# Plugins  ...............................................
+plugins:
+  - tags
+  - search
+  - blog:
+      blog_toc: true
+      archive: false
+
+# Extensions  ...............................................
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+# Navigation  ...............................................
+nav:

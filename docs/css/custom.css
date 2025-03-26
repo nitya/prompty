@@ -1,0 +1,13 @@
+/* --- Prompty Color Palette --- */
+
+:root  > * {
+  --md-primary-fg-color: #0369a1;
+  --md-primary-fg-color--light: #fafaf9;
+  --md-primary-fg-color--dark:  #292524;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 12; 
+}
+
+/* --- Custom Overrides --- */

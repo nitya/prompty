@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+  <style>
+    /** Custom CSS goes here **/
+    .md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
+  </style>
+
+  <section class="parallax">
+    <div class="content">
+      <h1> Agency with Observability <br/> &nbsp; <span></span></h1> <!-- Empty h1 for dynamic typing effect -->
+      <p class="centered-paragraph">
+      Speedup your inner loop!
+      </p>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block content %}
+<!-- You can have custom HTML content here -->
+{% endblock %}
+
+{% block footer %}
+<!-- You can have custom footer content here -->
+{% endblock %}
