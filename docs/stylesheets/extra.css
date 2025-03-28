@@ -1,5 +1,11 @@
-/* --- Prompty Color Palette --- */
+/*
+ * Custom Styling Here 
+ * See: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=theme+palett#custom-colors
+ * See: https://squidfunk.github.io/mkdocs-material/customization/#additional-css
+ */
 
+
+/* --- Prompty Color Palette --- */
 :root  > * {
   --md-primary-fg-color: #0369a1;
   --md-primary-fg-color--light: #fafaf9;
@@ -9,6 +15,7 @@
 [data-md-color-scheme="slate"] {
   --md-hue: 12; 
 }
+
 
 /* --- Custom Overrides --- */
 
@@ -34,20 +41,12 @@
   text-align: center;
 }
 
-#heroTitle {
-  font-size: 3em; /* Increased by 20% */
-  background: linear-gradient(to bottom, #0369a1,  #30CFD0, #292524); /* Vertical linear gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .button-padding {
-  padding-top: 25px; /* Adjust the padding value as needed */
+  padding: 10px 10px 40px 10px; /* Adjust the padding value as needed */
 }
 
 .button {
   background-color: #0369a1; /* Use light grey background */
-  color: white !important;
   font-size: 1.2em; /* Increase font size by 20% */
   padding: 12px 24px; /* Adjust padding to fit */
   border: none;
@@ -114,8 +113,9 @@
   margin-bottom: 10px;
 }
 
+/* Adjust duration and iterations as needed */
 .pulse-animation {
-  animation: pulse 1.5s 3; /* Adjust duration and iterations as needed */
+  animation: pulse 5s infinite; 
 }
 
 @keyframes pulse {

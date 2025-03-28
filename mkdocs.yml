@@ -10,9 +10,9 @@ repo_name: microsoft/prompty
 repo_url: https://github.com/microsoft/prompty
 
 extra_css:
-  - css/custom.css
+  - stylesheets/extra.css
 extra_javascript:
-  - js/custom.js
+  - javascripts/extra.js
 
 # Copyright ...................................................
 copyright: >
@@ -36,6 +36,9 @@ theme:
   # Theme Modes ...............................................
   palette:
     - media: "(prefers-color-scheme)"
+      scheme: default 
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode

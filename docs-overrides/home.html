@@ -2,15 +2,11 @@
 
 {% block tabs %}
 {{ super() }}
-
-<section>
-
-</section>
-
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="stylesheets/extra.css">
+
 <div class="parallax-container">
 
   <!-- Hero Section -->
@@ -19,14 +15,13 @@
     <div class="hero-content">
       <h1 id="heroTitle"></h1>
       <p id="heroText"></p>
-      <img src="assets/logo.svg" alt="Logo" class="pulse-logo" width="200" height="200">
       <div class="hero-button-container button-padding">
         <a id="heroButton" href="#" class="button"></a>
       </div>
+      <img src="assets/logo.svg" alt="Logo" class="pulse-logo" width="200" height="200">
     </div>
   </section>
 
-  <div>
     <!-- Section 2 -->
     <section class="card-section">
       <div class="card">
@@ -56,9 +51,7 @@
         </div>
       </div>
     </section>
-  </div>
 
-  <div>
     <!-- Section 5 -->
     <section class="card-section">
       <div class="card">
@@ -78,9 +71,8 @@
         </div>
       </div>
     </section>
-  </div>
 
 </div>
 
-<script src="js/custom.js"></script>
-{% endblock %}
+<script src="javascripts/extra.js"></script>
+{% endblock %}ç
