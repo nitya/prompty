@@ -16,6 +16,3 @@ Start with the **[Core Concepts](/docs/getting-started/concepts)** section to le
 
 
 ---
-
-[Want to Contribute To the Project?](/docs/contributing/) - _Guidance coming soon_.
-
