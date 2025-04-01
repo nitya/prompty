@@ -4,7 +4,6 @@
  * See: https://squidfunk.github.io/mkdocs-material/customization/#additional-css
  */
 
-
 /* --- Prompty Color Palette --- */
 :root  > * {
   --md-primary-fg-color: #0369a1;
@@ -15,7 +14,6 @@
 [data-md-color-scheme="slate"] {
   --md-hue: 12; 
 }
-
 
 /* --- Custom Overrides --- */
 
@@ -41,35 +39,65 @@
   text-align: center;
 }
 
+.hero-content h1 {
+  margin-bottom: 0.5rem; /* Reduced bottom margin for hero title */
+}
+
+.hero-content img {
+  margin-bottom: 1.5rem;
+}
+
 .button-padding {
-  padding: 10px 10px 40px 10px; /* Adjust the padding value as needed */
+  padding: 10px 10px 40px 10px;
 }
 
 .button {
-  background-color: #0369a1; /* Use light grey background */
-  font-size: 1.2em; /* Increase font size by 20% */
-  padding: 12px 24px; /* Adjust padding to fit */
+  background-color: #0369a1;
+  font-size: 1.2em;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-  transition: all 0.3s ease; /* Add transition for hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
-
 
 .button:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
 }
 
-.hero-image {
-  /* Add your hero image styles here */
+/* Hero Title Styles */
+#heroTitle {
+  font-size: 5rem;
+  background: linear-gradient(to bottom, rgb(131, 174, 186) 65%, #0369a1, #292524);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  #heroTitle {
+    font-size: 3rem;
+  }
+}
+
+#heroText {
+  margin-bottom: 1.5rem;
+}
+
+#heroButton {
+  border-radius: 25px;
+  background-color: transparent;
+  border: 2px solid #0369a1;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 /* Card Section */
-.card-section {
-  min-height: 75vh;
-  
+.card-section {  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,27 +121,67 @@
 
 .card h2 {
   font-size: 2em;
-  margin-bottom: 15px;
   color: var(--md-primary-fg-color);
+}
+
+.card-section .card h2 {
+  margin-top: 0.5rem;
 }
 
 .card-content {
   font-size: 1.1em;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #333;
 }
 
 .card-image {
   width: 100%;
-  max-width: 100%; /* Make sure it doesn't exceed its container */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
   max-height: 400px;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
+  background-color: #292524;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Adjust duration and iterations as needed */
+.card-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.card-list {
+  padding-left: 20px;
+}
+
+.card-list li {
+  margin-bottom: 5px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make card list items slightly smaller */
+.card-list li {
+  font-size: 0.85em;
+}
+
+/* Card data styles */
+.card-title {
+  /* Add any specific styling for dynamically created card titles */
+}
+
+.card-text {
+  /* Add any specific styling for dynamically created card text */
+}
+
+/* Pulse animation for logo */
 .pulse-animation {
   animation: pulse 5s infinite; 
 }
@@ -127,5 +195,122 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Horizontal Cards Section */
+.horizontal-cards-section {
+  padding: 40px 20px;
+  padding-bottom: 20px; /* Reduced bottom padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-cards-section + .horizontal-cards-section {
+  padding-top: 20px; /* Reduced top padding for consecutive horizontal-cards-sections */
+}
+
+.horizontal-cards-section-title {
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  color: var(--md-primary-fg-color);
+  text-align: center;
+}
+
+.horizontal-cards-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px; /* Match the width of the vertical cards */
+  width: 100%;
+  gap: 20px;
+  border: 1px solid #ddd; /* Add thin border */
+  border-radius: 10px; /* Rounded border */
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.horizontal-cards-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.horizontal-card {
+  flex: 1;
+  background-color: #e7e5e4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.horizontal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.horizontal-card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333333 !important; /* Force consistent color in both light and dark modes */
+}
+
+.horizontal-card-description {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333333 !important; /* Force consistent color in both light and dark modes */
+}
+
+/* Horizontal Cards with Background Images */
+.horizontal-card.with-bg-image {
+  background-color: #e7e5e4;
+  background-size: 50% auto;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+.horizontal-card-content-wrapper {
+  z-index: 1;
+  width: 100%;
+}
+
+.horizontal-card-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #333333 !important;
+}
+
+.horizontal-card-list li {
+  margin-bottom: 5px;
+  color: #333333 !important;
+  font-size: 0.95em;
+}
+
+/* Responsive adjustments for horizontal cards */
+@media (max-width: 768px) {
+  .horizontal-cards-container {
+    flex-direction: column;
+  }
+  
+  .horizontal-card {
+    margin-bottom: 15px;
+  }
+}
+
+/* Responsive adjustments for horizontal cards with background images */
+@media (max-width: 768px) {
+  .horizontal-card.with-bg-image {
+    min-height: 250px;
   }
 }
