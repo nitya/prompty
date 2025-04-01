@@ -1,0 +1,16 @@
+---
+name: Chat Example
+description: A prompt that uses the chat API to answer questions
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}

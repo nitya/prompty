@@ -1,0 +1,18 @@
+---
+name: Mode Configuration Example
+description: A prompt that uses different modes
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    mode: debug
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}

@@ -1,0 +1,17 @@
+---
+name: Versioning Example
+description: A prompt that includes version information
+authors:
+  - example_author
+version: 1.0.0
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}

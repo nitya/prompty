@@ -1,0 +1,37 @@
+---
+name: Social Media Content Creator
+description: A prompt that generates engaging social media content
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  platform: LinkedIn
+  topic: artificial intelligence trends
+  tone: informative but conversational
+  include_hashtags: true
+---
+system:
+You are a social media content specialist who creates engaging, platform-appropriate content.
+user:
+Create a {{platform}} post about {{topic}} in a {{tone}} tone. {{#if include_hashtags}}Include relevant hashtags.{{/if}}
+
+---
+name: JSON Output Example
+description: A prompt that returns responses in JSON format
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+Return the response in JSON format.
+user:
+{{question}}

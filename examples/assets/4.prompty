@@ -1,0 +1,16 @@
+---
+name: Sample JSON Prompt
+description: A prompt that uses sample JSON files
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+sample:
+  data: ${file:sample.json}
+---
+system:
+You are an AI assistant that processes sample JSON data.
+user:
+Please process the following sample data: {{data}}

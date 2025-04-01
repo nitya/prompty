@@ -1,0 +1,30 @@
+---
+name: Image Processing Prompt
+description: A prompt that processes image data
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    tools:
+    - type: function
+      function:
+        name: process_image
+        description: Process an image and return details
+        parameters:
+          properties:
+            image:
+              description: Base64 encoded image data
+              type: string
+          required:
+          - image
+          type: object
+sample:
+  image: "base64_encoded_image_data"
+---
+system:
+You are an AI assistant that processes images.
+user:
+Please process the following image: {{image}}
