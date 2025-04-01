@@ -1,5 +1,5 @@
 # General ...................................................
-site_name: Prompty Documentation
+site_name: Prompty.AI
 site_url: https://nitya.github.io/prompty
 site_author: Nitya Narasimhan
 site_description: >-
@@ -125,6 +125,3 @@ markdown_extensions:
 
 # Navigation  ...............................................
 nav:
-  - Home: index.md
-  - Changelog: 
-    - blog/index.md

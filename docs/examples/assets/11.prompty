@@ -1,0 +1,19 @@
+---
+name: Custom Template Example
+description: A prompt that uses a custom template
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+template:
+  format: mustache
+  parser: prompty
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}

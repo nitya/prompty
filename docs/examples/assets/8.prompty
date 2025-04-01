@@ -1,0 +1,18 @@
+---
+name: Azure Example
+description: A prompt that uses an Azure model
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: gpt-35-turbo
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}

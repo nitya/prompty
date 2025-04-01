@@ -1,0 +1,20 @@
+---
+name: Streaming Example
+description: A prompt that uses streaming responses
+authors:
+  - example_author
+model:
+  api: chat
+  configuration:
+    azure_deployment: gpt-35-turbo
+  parameters:
+    stream: true
+    stream_options:
+      include_usage: true
+sample:
+  question: What is the weather like today?
+---
+system:
+You are a helpful assistant.
+user:
+{{question}}
