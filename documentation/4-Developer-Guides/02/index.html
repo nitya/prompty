@@ -961,6 +961,8 @@
           
         
       
+        
+      
     
     
     
@@ -990,6 +992,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
@@ -999,6 +1006,29 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-Specification/revised/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompty Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -2288,15 +2318,7 @@
 <li><strong>Preparing</strong> - where configuration paramers are normalized and inputs validated.</li>
 <li><strong>Execution</strong> - where the prompt template is rendered and model invoked with it.</li>
 </ol>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>graph TD
+<pre class="mermaid"><code>graph TD
     A[Prompty File] --&gt;|loads| B[Prompty]
     B --&gt;|normalizes| C[GlobalConfig]
     B --&gt;|prepares| D[Inputs]
@@ -2304,8 +2326,7 @@
     E --&gt;|runs| F[Executor]
     E --&gt;|processes| G[Processor]
     E --&gt;|renders| H[Renderer]
-    E --&gt;|parses| I[Parser]
-</code></pre></div></td></tr></table></div>
+    E --&gt;|parses| I[Parser]</code></pre>
 <h2 id="how-does-it-work">How Does It Work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
