@@ -1,3 +1,2 @@
 # Documentation site
 mkdocs-material
-mkdocs-rss-plugin

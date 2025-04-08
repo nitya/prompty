@@ -1,6 +1,6 @@
 # General ...................................................
 site_name: Prompty.AI
-site_url: https://nitya.github.io/prompty
+site_url: https://nitya.github.io/prompty/
 site_author: Nitya Narasimhan
 site_description: >-
   Prompty Documentation Website Using Mkdocs-Material
@@ -13,6 +13,7 @@ extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - javascripts/extra.js
+  
 
 # Copyright ...................................................
 copyright: >
@@ -88,7 +89,10 @@ extra:
       link: https://aka.ms/AzureAIFoundry/Discord 
     - icon: fontawesome/brands/microsoft
       name: Microsoft
-      link: https://aka.ms/microsoft
+      link: https://aka.ms/microsoftextra
+  version:
+    provider: mike
+    default: stable
 
 # Plugins  ...............................................
 plugins:
@@ -107,7 +111,11 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.emoji:
